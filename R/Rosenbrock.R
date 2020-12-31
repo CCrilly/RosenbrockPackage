@@ -43,6 +43,7 @@ x2_iter <- function(x1,x2){
 #' @examples
 #' x1_iter(1,1)
 x1_iter <- function(x1,x2){
+  require(pracma)
   roots <- Real(polyroot(c(-1,-(200*(x1^2 + x2)-1),0,400)))
   f_eval <- f(roots, x2)
   # print(c(roots, f_eval))
